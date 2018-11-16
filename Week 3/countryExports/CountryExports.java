@@ -66,17 +66,16 @@ public class CountryExports {
     public void tester() {
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();
-        String countryCheck = "Nauru";
-        System.out.println(countryInfo(parser, countryCheck));
+                
+        parser = fr.getCSVParser();
+        listExportersTwoProducts(parser, "cotton", "flowers");
+        
+        System.out.println("*****************************************");
+        parser = fr.getCSVParser();
+        countryExports(parser, "cocoa");
         System.out.println("=========================================");
         
-        parser = fr.getCSVParser();
-        listExportersTwoProducts(parser, "gold", "diamonds");
-        
-        parser = fr.getCSVParser();
-        countryExports(parser, "sugar");
-        System.out.println("=========================================");
-        
+        System.out.println("*****************************************");
         parser = fr.getCSVParser();
         bigExporters(parser, "$999,999,999,999");
     }
